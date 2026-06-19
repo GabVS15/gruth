@@ -278,7 +278,7 @@ Gouverneur **actuel** : **Mark Helman** (67e), Démocrate, depuis le 04 mars 202
 - Composée de **10 à 18 représentants** élus, siégeant sous l'autorité d'un **Speaker** (élu par ses pairs).
 - Rôle : **rédiger et adopter les lois** de l'État, et **surveiller le pouvoir exécutif** (demander des comptes au gouverneur ou à ses responsables, et, exceptionnellement, démettre le gouverneur de ses fonctions).
 
-**Composition actuelle (11/11 sièges, mise à jour du 04/04) :**
+**Composition actuelle (9/11 sièges, mise à jour du 04/04) :**
 
 - **Speaker (Président)** : Hans Durant *(Démocrate)*
 - **Speaker Pro Tempore (Vice-Président)** : Josh McCarter *(Républicain)*
@@ -286,7 +286,7 @@ Gouverneur **actuel** : **Mark Helman** (67e), Démocrate, depuis le 04 mars 202
 | Groupe | Sièges | Représentants | Suppléant |
 |--------|--------|----------------|-----------|
 | Démocrate | 4 | Jesse Harris **(Whip)**, John Bellinger, Jason Reed, Grant Rutherford | Sandro De La Rosa |
-| Libertarien | 3 | Jackson McAllister **(Whip)**, Daren Kramer, Will Reyes | Manuel Paterson |
+| Libertarien | 2 | Jackson McAllister **(Whip)**, Amber Millington | — |
 | Républicain | 2 | Lucas R. Willchurch **(Whip)**, Josh McCarter **(Speaker Pro Tempore)** | Earl Thompson |
 | Indépendants | 1 | Donald Becker | — |
 | People's Alliance | 1 | Marcus Bradley | Joel Sullivan |
