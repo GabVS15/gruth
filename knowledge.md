@@ -268,10 +268,28 @@ Gouverneur **actuel** : **Mark Helman** (67e), Démocrate, depuis le 04 mars 202
 - **Élection du Sheriff** : tous les 2 ans.
 - Les élections se tiennent dans les **bureaux de vote** présents dans chaque **City Hall (mairie)**.
 
+**Conditions de candidature à l'élection du Gouverneur :**
+- Être âgé de 18 ans minimum et posséder la nationalité américaine.
+- Être rattaché à un **parti politique**.
+- Publier un **programme politique** avec sa candidature.
+- Publier une **liste d'au moins 4 personnes** susceptibles de siéger à l'Assemblée Générale (sans obligation de les hiérarchiser) : cette équipe accompagne le candidat et entre à l'Assemblée en cas de victoire, ou en cas de défaite selon le score obtenu.
+- Date limite de dépôt des candidatures : **mercredi 1ᵉʳ juillet 2026 (inclus)**.
+
+**Liste législative seule :** il est possible de présenter uniquement une liste de candidats à l'Assemblée Générale, sans candidat au poste de Gouverneur. Les conditions sont identiques à celles de l'élection du Gouverneur, et le titre de la candidature doit être précédé de **« [Législatives] »**.
+
+**Résultat et répartition des sièges :** le candidat ayant obtenu le plus de voix est élu Gouverneur. Le score réalisé par chaque candidat lui donne, de facto, un nombre de représentants à l'Assemblée Générale **proportionnel à son score** — ce principe vaut pour tous les candidats, vainqueur ou non.
+
 ### 6.2 Le Gouverneur (pouvoir exécutif)
-- Élu, il dirige la politique de son gouvernement et nomme des responsables de pôles.
-- Il **ratifie les lois** votées par l'Assemblée Générale et dispose d'un **droit de veto** (la loi doit alors être revotée).
-- Il dispose du **droit de grâce** : il peut arrêter les poursuites contre une personne non encore jugée, ou supprimer la peine d'une personne déjà condamnée.
+- Dirige la branche exécutive de l'État et met en œuvre le projet pour lequel il a été élu.
+- Nomme des **Hauts Commissaires** ainsi que divers responsables : le **Procureur général**, les **juges à la Cour Suprême**, le **Secrétaire général de l'État**, etc.
+- Propose le **budget** de l'État.
+- Rédige des **projets de loi**, et **ratifie ou non** les lois votées par les parlementaires (**droit de veto** — la loi doit alors être revotée).
+- Publie des **règlements ou ordonnances**.
+- Peut déclarer l'**état d'urgence**.
+- Dispose du **droit de grâce** : il peut arrêter les poursuites contre une personne non encore jugée, ou supprimer la peine d'une personne déjà condamnée.
+- Mandat de **quatre mois**.
+- **Non-cumul des fonctions** : en cas de victoire, le Gouverneur entrant doit abandonner toutes ses fonctions précédentes, à l'exception du rôle de **Chairman de son parti politique**.
+- L'époux ou l'épouse du candidat élu accède à la fonction de **Première Dame** ou **Premier Gentleman** du Tennessee.
 - Gouverneur **actuel** : **Mark Helman** (67e), depuis le 4 mars 2026.
 
 ### 6.3 L'Assemblée Générale (pouvoir législatif)
