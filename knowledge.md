@@ -285,10 +285,10 @@ Gouverneur **actuel** : **Mark Helman** (67e), Démocrate, depuis le 04 mars 202
 
 | Groupe | Sièges | Représentants | Suppléant |
 |--------|--------|----------------|-----------|
-| Démocrate | 4 | Jesse Harris **(Whip)**, John Bellinger, Jason Reed, Jayden Arnold | Sandro De La Rosa |
+| Démocrate | 4 | Jesse Harris **(Whip)**, John Bellinger, Jason Reed, Grant Rutherford | Sandro De La Rosa |
 | Libertarien | 3 | Jackson McAllister **(Whip)**, Daren Kramer, Will Reyes | Manuel Paterson |
-| Républicain | 2 | Daniel Whittaker **(Whip)**, Josh McCarter **(Speaker Pro Tempore)** | Earl Thompson |
-| Indépendants | 1 | Donald Becker | Igor Flemming |
+| Républicain | 2 | Lucas R. Willchurch **(Whip)**, Josh McCarter **(Speaker Pro Tempore)** | Earl Thompson |
+| Indépendants | 1 | Donald Becker | — |
 | People's Alliance | 1 | Marcus Bradley | Joel Sullivan |
 
 ---
