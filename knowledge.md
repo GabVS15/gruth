@@ -28,6 +28,15 @@ Gouverneur **actuel** : **Mark Helman** (67e), Démocrate, depuis le 04 mars 202
 | 51e | **Joshua D. Parker** | Républicain | 10 mai 2019 → 22 sept 2019 |
 | 50e | **Zack White** | Patriotic Party of the People | 18 nov 2018 → 10 mai 2019 |
 
+### Élection en cours — 68e élection gouvernatoriale
+
+| Candidat | Parti |
+|----------|-------|
+| **Grant Rutherford** | Démocrate |
+| **Mark Lamb** | Républicain |
+| **Alexandre Lynch** | Conservative Party |
+| **Marcus Bradley** | Peoples Party |
+
 ---
 
 ## 2. CODE PÉNAL DU TENNESSEE
@@ -268,6 +277,19 @@ Gouverneur **actuel** : **Mark Helman** (67e), Démocrate, depuis le 04 mars 202
 ### 6.3 L'Assemblée Générale (pouvoir législatif)
 - Composée de **10 à 18 représentants** élus, siégeant sous l'autorité d'un **Speaker** (élu par ses pairs).
 - Rôle : **rédiger et adopter les lois** de l'État, et **surveiller le pouvoir exécutif** (demander des comptes au gouverneur ou à ses responsables, et, exceptionnellement, démettre le gouverneur de ses fonctions).
+
+**Composition actuelle (11/11 sièges, mise à jour du 04/04) :**
+
+- **Speaker (Président)** : Hans Durant *(Démocrate)*
+- **Speaker Pro Tempore (Vice-Président)** : Josh McCarter *(Républicain)*
+
+| Groupe | Sièges | Représentants | Suppléant |
+|--------|--------|----------------|-----------|
+| Démocrate | 4 | Jesse Harris **(Whip)**, John Bellinger, Jason Reed, Jayden Arnold | Sandro De La Rosa |
+| Libertarien | 3 | Jackson McAllister **(Whip)**, Daren Kramer, Will Reyes | Manuel Paterson |
+| Républicain | 2 | Daniel Whittaker **(Whip)**, Josh McCarter **(Speaker Pro Tempore)** | Earl Thompson |
+| Indépendants | 1 | Donald Becker | Igor Flemming |
+| People's Alliance | 1 | Marcus Bradley | Joel Sullivan |
 
 ---
 
