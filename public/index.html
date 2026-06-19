@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRuth</title>
+  <meta name="description" content="GRuth.AI" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Filtre SVG — beaucoup plus fluide que filter:blur() CSS -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="glow-blur" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+        <feGaussianBlur stdDeviation="80"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="app">
+    <!-- Panneau latéral (caché par défaut, ouvert par le hamburger) -->
+    <aside class="sidebar" id="sidebar">
+      <div class="rail-top">
+        <button class="icon-btn" id="toggleSidebar" aria-label="Fermer le menu">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <button class="new-chat" id="newChat">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="label">Nouvelle discussion</span>
+      </button>
+      <div class="rail-section-title label">Récent</div>
+      <nav class="history" id="history" aria-label="Historique"></nav>
+      <div class="sidebar-bottom label">
+        <div class="secure-badge">
+          <svg viewBox="0 0 24 24" width="15" height="15"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Sécurisé · Données locales</span>
+        </div>
+        <button class="onbo-replay-btn" id="debugOnboarding">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10"/><path d="M12 8v4l2 2"/><path d="M18 14v4h4"/></svg>
+          Revoir la présentation
+        </button>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- Zone principale -->
+    <main class="main">
+      <!-- Fond dégradé plein écran, derrière tout le contenu -->
+      <div class="glow" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-btn" id="toggleSidebar2" aria-label="Ouvrir le menu">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <div class="has-popover">
+            <button class="model-pill" id="modelPill">
+              <img class="pill-logo" src="logo.svg" alt="" width="22" height="22" />
+              GRuth <span class="muted">Tennessee</span>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="popover" role="tooltip">GRuth, l'assistant de l'État du Tennessee, fonctionne avec Mistral AI.</div>
+          </div>
+        </div>
+        <div class="has-popover">
+          <button class="upgrade-btn">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="m12 2 7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V5l7-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Sécurisé
+          </button>
+          <div class="popover right" role="tooltip">Toutes vos données restent en local sur votre appareil et ne sont jamais stockées.</div>
+        </div>
+      </header>
+
+      <div class="chat-scroll" id="chatScroll">
+        <!-- Accueil -->
+        <section class="welcome" id="welcome">
+          <div class="greeting-row">
+            <h1 class="greeting" id="greeting">GRuth</h1>
+          </div>
+          <p class="greeting-sub">Votre assistant pour les services de l'État du Tennessee</p>
+        </section>
+
+        <div class="messages" id="messages"></div>
+      </div>
+
+      <!-- Barre de saisie -->
+      <div class="composer-wrap">
+        <form class="composer" id="composer">
+          <button type="button" class="composer-icon" aria-label="Ajouter">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <textarea id="input" rows="1" placeholder="Demander à GRuth" autocomplete="off"></textarea>
+          <div class="composer-right">
+            <div class="has-popover">
+              <button type="button" class="mini-model">Mistral <svg viewBox="0 0 24 24" width="14" height="14"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div class="popover up right" role="tooltip">GRuth fonctionne avec Mistral AI.</div>
+            </div>
+            <button type="submit" class="send-btn" id="sendBtn" aria-label="Envoyer" disabled>
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 20V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </form>
+        <p class="composer-note">GRuth peut commettre des erreurs. Vérifiez les informations officielles de l'État du Tennessee.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Onboarding — affiché uniquement à la première visite -->
+  <div class="onboarding-overlay" id="onboarding" role="dialog" aria-modal="true">
+    <div class="onboarding-card">
+
+      <div class="onboarding-page active" id="onboPage1">
+        <div class="onboarding-hero">
+          <img src="/logo.svg" class="onboarding-hero-icon" alt="" aria-hidden="true" />
+        </div>
+        <div class="onboarding-content">
+          <h2 class="onboarding-title">Bienvenue sur GRuth</h2>
+          <p class="onboarding-body">
+            GRuth est l'assistant conversationnel officiel de l'État du Tennessee,
+            déployé par l'<strong>administration du gouverneur Rutherford</strong>
+            pour donner à chaque citoyen un accès immédiat aux informations légales,
+            institutionnelles et administratives de l'État.
+          </p>
+          <button class="onboarding-btn" id="onboNext">Suivant</button>
+          <div class="onboarding-dots">
+            <span class="onbo-dot active"></span>
+            <span class="onbo-dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="onboarding-page" id="onboPage2">
+        <div class="onboarding-hero">
+          <svg class="onboarding-hero-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="m12 2 7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V5l7-3Z" stroke-linejoin="round"/>
+            <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="onboarding-content">
+          <h2 class="onboarding-title">Entièrement gratuit</h2>
+          <p class="onboarding-body">
+            GRuth est mis à disposition de tous les citoyens de l'État du Tennessee
+            sans aucun frais. Posez vos questions sur la loi, les démarches ou les
+            institutions — GRuth vous répond instantanément, 24h/24.
+          </p>
+          <button class="onboarding-btn" id="onboStart">Commencer</button>
+          <div class="onboarding-dots">
+            <span class="onbo-dot"></span>
+            <span class="onbo-dot active"></span>
+          </div>
+          <p class="onboarding-disclaimer">* Cet assistant est fictif et s'inscrit dans le cadre d'un jeu de rôle. Il ne représente pas un service gouvernemental réel.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
