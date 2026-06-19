@@ -452,7 +452,7 @@ body {
   color: #fff;
 }
 .msg.user .avatar { background: #8e918f; }
-.msg.assistant .avatar { background: linear-gradient(135deg, var(--grad-1), var(--grad-2), var(--grad-3)); }
+.msg.assistant .avatar { background: #0a2a66; }
 .msg.assistant .avatar svg { width: 22px; height: 22px; display: block; }
 
 .msg .bubble { padding-top: 3px; min-width: 0; flex: 1; }

@@ -3,11 +3,14 @@
 export function renderMarkdown(text) {
   const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-  // Les blocs ``` sont extraits avant l'échappement pour ne pas encoder le code source
+  // Les blocs ``` sont extraits avant l'échappement pour ne pas encoder le code source.
+  // Le marqueur \0 est un sentinel sûr : il ne peut pas apparaître dans du texte normal,
+  // contrairement à un nombre entouré d'espaces (ex. "5 000 $") qui serait pris à tort
+  // pour un marqueur lors de la réinjection.
   const blocks = [];
   text = text.replace(/```(\w*)\n?([\s\S]*?)```/g, (_, _lang, code) => {
     blocks.push(`<pre><code>${esc(code.replace(/\n$/, ""))}</code></pre>`);
-    return ` ${blocks.length - 1} `;
+    return `\0${blocks.length - 1}\0`;
   });
 
   text = esc(text);
@@ -56,5 +59,5 @@ export function renderMarkdown(text) {
   if (inList) html += `</${listTag}>`;
 
   // Réinjecter les blocs de code à leur position d'origine
-  return html.replace(/ (\d+) /g, (_, i) => blocks[+i]);
+  return html.replace(/\0(\d+)\0/g, (_, i) => blocks[+i]);
 }
