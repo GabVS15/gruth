@@ -84,8 +84,14 @@ app.post("/api/chat", async (req, res) => {
 
   // Garde-fou anti-vidage de tokens : on rejette toute requête contenant un message
   // utilisateur trop long, avant même de relayer quoi que ce soit à l'API Mistral.
+  // NB : la limite ne s'applique qu'aux messages 'user' — les réponses de l'assistant
+  // peuvent légitimement dépasser MAX_MESSAGE_CHARS.
   const tooLong = messages.some(
-    (m) => m && typeof m.content === "string" && m.content.length > MAX_MESSAGE_CHARS,
+    (m) =>
+      m &&
+      m.role === "user" &&
+      typeof m.content === "string" &&
+      m.content.length > MAX_MESSAGE_CHARS,
   );
   if (tooLong) {
     return res.status(400).json({
