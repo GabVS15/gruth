@@ -318,3 +318,63 @@ L'État connaît plusieurs types d'organisations criminelles :
 - **Street-Mobs** : structures hybrides entre gang de rue et mafia émergente ; contrôlent un territoire et infiltrent les commerces locaux (boutiques, bars, boîtes de nuit).
 - **Mobs (mafias)** : organisations structurées comme une entreprise (chef, sous-chefs, soldats), cherchant la discrétion et parfois infiltrées dans des institutions légales.
 - **Motorcycle Clubs (MC)** : clubs de motards structurés (Président, Vice-Président, Sergent d'Armes) masquant des activités criminelles, reconnaissables à leurs patchs et couleurs.
+
+---
+
+## 8. DÉCRETS DU GOUVERNEUR HELMAN (Ordres Exécutifs, Proclamations, Nominations & Grâces)
+
+> Recueil officiel des Ordres Exécutifs (Executive Orders), proclamations, mémorandums et
+> lettres de commission émis par le Gouverneur **Mark Helman** (67e), publiés au Bulletin
+> Officiel / Tennessee Register. Le Secrétaire d'État co-signe et enregistre les actes :
+> **Horace Shaw** jusqu'au 3 avril 2026, puis **Jonathan Cruz** à compter de sa nomination.
+
+### EO No. 1 — 4 mars 2026 *(co-signé Horace Shaw)*
+**Abrogation des Ordres Exécutifs 2025-6 et 2025-7 — Rétablissement de l'égalité d'accès aux services publics.** Abrogation totale du « Statut du Citoyen Productif » (jugé inconstitutionnel par la Cour Suprême le 29 août 2025). Toutes les attestations de « Citoyen Productif » sont nulles et non avenues ; destruction des fichiers d'identification ; seuls critères de priorisation autorisés : ordre chronologique d'arrivée, urgence objective documentée, obligations légales. Effet immédiat, non rétroactif.
+
+### EO No. 2 — 4 mars 2026 *(co-signé Horace Shaw)*
+**Abrogation de l'Ordonnance du 29 juillet 2025 (Gouverneur Jim Brown) — Rétablissement des unités spécialisées légitimes des forces de l'ordre.** Réautorise les unités spécialisées (lutte anti-gangs, anti-drogue, crime organisé, intervention tactique, protection des dignitaires, sécurité événementielle, task forces), incluant explicitement la *Repression Unit du Davidson County Sheriff's Office*. Encadrement par le Secrétaire à la Sécurité Publique, un Comité de Surveillance Citoyenne, et réintégration conditionnelle des personnels. Interdiction formelle des abus (force excessive, arrestations de masse, profilage racial, intimidation politique, équipement militaire injustifié).
+
+### EO No. 3 — 27 mars 2026 *(co-signé Horace Shaw, Daniel Miller, Sean H. Armstrong)*
+**Modalités d'application de l'Article 430-1 du Code Pénal (occupation illicite du domaine public vs liberté d'expression).** Définit l'occupation illicite, protège la liberté d'expression (manifestations, rassemblements, art), et fournit un tableau de distinction opérationnel pour les forces de l'ordre. Procédure d'intervention en 3 phases : évaluation initiale → mise en demeure verbale (délai 10 min, réductible à 2 min) → intervention coercitive proportionnée. Protocole spécifique pour les manifestations (supervision/protection, pas de dispersion forcée sans autorisation du Département de la Sécurité Intérieure). Obligations de reporting sous 24 h.
+
+### EO No. 5 — Proclamation, 13 avril 2026 *(co-signé Jonathan Cruz, Daniel Miller)*
+**Journée de l'environnement à Nashville.** Fermeture temporaire des grands axes de Nashville à la circulation motorisée (espace rendu aux piétons/cyclistes), extinction des éclairages des bâtiments publics, ouverture des rues aux commerçants et artisans locaux, invitation à chaque ville et comté à organiser sa propre initiative.
+
+### EO No. 6 — Proclamation, 2 mai 2026 *(co-signé Jonathan Cruz, Daniel Miller)*
+**Fermeture temporaire du centre-ville de Townsend (comté de Blount) à la circulation motorisée** le samedi 2 mai 2026, de 08h00 à 20h00. Coordination par le shérif du comté de Blount avec le Tennessee Highway Patrol ; accès maintenu pour les véhicules d'urgence, de secours et l'approvisionnement des riverains.
+
+### EO No. 7 — *(co-signé Jonathan Cruz)*
+**Nomination de M. Lucas McCall** au poste de **Commissaire du Département des Services d'Urgence et d'Incendie** de l'État du Tennessee. Autorité sur l'ensemble des services de secours et d'incendie, responsable devant le Gouverneur. Transmis à l'Assemblée Générale pour confirmation.
+
+### EO No. 8 — Mémorandum Exécutif *(co-signé Jonathan Cruz)*
+**Nomination de M. Emerson Bennett** au poste de **Chef de Cabinet du Gouverneur.** Coordination du cabinet exécutif, supervision des collaborateurs du Gouverneur, représentation institutionnelle interne. Effet à la double signature.
+
+### EO No. 9 — 12 mai 2026 *(co-signé Jonathan Cruz)*
+**Création de l'Office de l'Inspecteur Général de l'État du Tennessee** (rattaché au Cabinet du Gouverneur). Mission : enquêtes de terrain, audits, évaluations de programmes dans tous les départements, sans restriction sectorielle. Indépendance opérationnelle ; accès aux documents sur autorisation écrite du Gouverneur ; rapports transmis au Gouverneur.
+
+### EO No. 10 — 13 mai 2026 *(co-signé Jonathan Cruz)*
+**Nomination de M. Jayden Arnold** comme **Inspecteur Général de l'État du Tennessee** (en application de l'Art. 5 de l'EO No. 9). Investi des compétences et de l'autorité fonctionnelle des Articles 3 et 4 dudit décret.
+
+### EO No. 11 — 1er juin 2026 *(co-signé Jonathan Cruz)*
+**Abrogation de l'Ordonnance N° 03-DB2025** (réduction du taux d'imposition des entreprises et aide directe aux petites entreprises). Suppression du programme d'aide directe de 5 000 $ (sans effet rétroactif ; versements déjà effectués acquis), remplacé par le Tennessee Startup Fund. Maintien du taux d'imposition des entreprises à 7 % via l'EO No. 12 signé concomitamment.
+
+### EO No. 12 — 1er juin 2026 *(co-signé Jonathan Cruz)*
+**Institution du Tennessee Startup Fund et maintien du taux d'imposition des entreprises à 7 %.** Fonds doté de 500 000 $ (fonds discrétionnaires de l'exécutif), subventions directes non remboursables de 1 $ à 25 000 $ aux primo-créateurs d'entreprise, accompagnement professionnel gratuit de 6 mois. Géré par une Commission de 8 membres (exécutif : Helman, Bennett, Miller ; experts indépendants : Dr. Marcus J. Holloway, Patricia Delacroix, Rev. Isaiah T. Booker, Sandra Kowalski, James Callahan). Taux d'imposition maintenu à 7 % ; toute révision future relève de l'Assemblée Générale.
+
+### EO No. 13 — 12 juin 2026
+**Nomination du Haut-Commissaire chargé des relations parlementaires.** M. **Gaspard Stone** nommé Haut-Commissaire chargé des relations parlementaires auprès du Gouverneur (représentation du Gouvernement auprès de l'Assemblée Générale, suivi des projets de loi, préparation des questions au Gouvernement, dialogue bipartisan). Nomination transmise à l'Assemblée Générale pour confirmation à la majorité simple (Art. III, Section 18).
+
+### EO No. 14 — 13 juin 2026 *(co-signé Jonathan Cruz)*
+**Confirmation de la désignation de l'organisation « Direct Action » comme entité terroriste intérieure** (désignation initiale par l'EO #5 du 14 août 2025, 65e administration). Fait suite à une déclaration de « traque » publiée le 12 juin (plateforme Yelpler) visant officiers, militaires, élus et acteurs économiques, et désignant nommément le Représentant **Jason Reed**. Mise en place d'un dispositif de protection (coordonné par Sean H. Armstrong) ; poursuites et enquête en lien avec le Procureur Général (Art. 240-3, 240-4, 320-2 du Code) ; rapport à la Chambre des Représentants sous 7 jours.
+
+### EO No. 15 — 22 juin 2026 *(émis 21 juin, co-signé Jonathan Cruz)*
+**Régime du cannabis réglementé (Art. 370-1 à 370-7 du Code).** Création de la **Tennessee Cannabis Regulatory Authority (TCRA)**. 22 articles : 6 catégories de licences (A à F), conditions d'éligibilité (21 ans, résidence ≥ 2 ans), frais et redevances, équité sociale (≥ 30 % des licences de détail réservées 2 ans), production en installations fermées (> 500 m d'une école), transformation (≤ 100 mg THC/conditionnement, 10 mg/dose), vente au détail (9h–00h, ≤ 30 g/transaction), protection des mineurs, cannabis médical (plafond 60 g), détention personnelle (30 g) et autoculture (6 pieds, 3 en floraison), qualité/étiquetage, publicité encadrée, affectation des recettes, sanctions administratives (≤ 25 000 $/manquement), recours. Entrée en vigueur le 1er jour du 2e mois suivant publication ; évaluation indépendante à 36 mois.
+
+### EO No. 16 — 25 juin 2026 *(émis 21 juin, co-signé Jonathan Cruz)*
+**Hommage au Battalion Chief Aaron Scott (Nashville Fire Department).** Suite au décès en service du Chief Scott le 20 juin 2026 (29 ans de service). Deuil officiel jusqu'au coucher du soleil le 27 juin 2026 (drapeaux en berne), minute de silence à l'échelle de l'État le 27 juin (15h00 administrations, 19h00 services de secours), obsèques déclarées cérémonie officielle d'État, honneurs funèbres aux pompiers tombés en service. Condoléances à l'époux William Scott, sa sœur Jennifer et sa nièce Ava.
+
+### Lettres de commission officielles
+- **Jonathan Cruz** — *3 avril 2026* : nommé **Secrétaire d'État de l'État du Tennessee** (né le 20 janvier 1983, domicilié 2448 Cottonwood Lane, Nashville). Confirmé par l'Assemblée Générale. Attributions : tenue du registre officiel des actes du Gouverneur, garde des archives d'État, administration des processus électoraux, enregistrement des entreprises, coordination des affaires gouvernementales.
+- **Gabriel Paxton** — *5 avril 2026* : nommé **Haut Commissaire aux Relations Parlementaires** de l'État du Tennessee (représentation du Gouverneur auprès de l'Assemblée Générale et de ses commissions, suivi des projets de loi, liaison avec les groupes parlementaires).
+
+*Décrets — dernière mise à jour de référence : 26 juin 2026.*
