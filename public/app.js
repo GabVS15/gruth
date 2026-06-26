@@ -1,6 +1,7 @@
 import {
   TITLE_MAX_LENGTH,
   TEXTAREA_MAX_HEIGHT,
+  MESSAGE_MAX_CHARS,
   API_ENDPOINT,
   FALLBACK_ANSWER,
   ONBOARDING_KEY,
@@ -161,6 +162,12 @@ function setStreaming(on) {
 async function sendMessage(text) {
   text = text.trim();
   if (!text || streaming) return;
+
+  // Garde-fou anti-spam : on tronque tout message dépassant la limite de caractères
+  // (le serveur rejette de toute façon au-delà de MAX_MESSAGE_CHARS).
+  if (text.length > MESSAGE_MAX_CHARS) {
+    text = text.slice(0, MESSAGE_MAX_CHARS);
+  }
 
   let conv = currentConv();
   if (!conv) { newConversation(); conv = currentConv(); }

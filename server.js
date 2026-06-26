@@ -12,6 +12,9 @@ import {
   TEMPERATURE,
   MAX_HISTORY,
   MAX_BODY_SIZE,
+  MAX_MESSAGE_CHARS,
+  RATE_LIMIT_WINDOW_MS,
+  RATE_LIMIT_MAX,
   PORT_RETRY_MAX,
 } from "./config/server.js";
 import { buildSystemPrompt } from "./config/system-prompt.js";
@@ -44,8 +47,23 @@ app.use(helmet({
     },
   },
 }));
-app.use(rateLimit({ windowMs: 60_000, max: 20, standardHeaders: true, legacyHeaders: false }));
+app.use(rateLimit({
+  windowMs: RATE_LIMIT_WINDOW_MS,
+  max: RATE_LIMIT_MAX,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: "Trop de requêtes. Réessaie dans une minute." },
+}));
+// Si le corps JSON dépasse MAX_BODY_SIZE, express.json lève une erreur 413 (gérée ci-dessous)
 app.use(express.json({ limit: MAX_BODY_SIZE }));
+
+// Corps trop volumineux (au-delà de MAX_BODY_SIZE) : réponse claire au lieu d'une 500
+app.use((err, _req, res, next) => {
+  if (err?.type === "entity.too.large") {
+    return res.status(413).json({ error: "Message trop volumineux." });
+  }
+  next(err);
+});
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/api/health", (_req, res) => {
@@ -62,6 +80,17 @@ app.post("/api/chat", async (req, res) => {
   const { messages } = req.body || {};
   if (!Array.isArray(messages) || messages.length === 0) {
     return res.status(400).json({ error: "Le champ 'messages' est requis." });
+  }
+
+  // Garde-fou anti-vidage de tokens : on rejette toute requête contenant un message
+  // utilisateur trop long, avant même de relayer quoi que ce soit à l'API Mistral.
+  const tooLong = messages.some(
+    (m) => m && typeof m.content === "string" && m.content.length > MAX_MESSAGE_CHARS,
+  );
+  if (tooLong) {
+    return res.status(400).json({
+      error: `Message trop long (max ${MAX_MESSAGE_CHARS} caractères).`,
+    });
   }
 
   // Le prompt système est injecté côté serveur — l'utilisateur ne peut pas le remplacer

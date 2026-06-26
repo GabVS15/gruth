@@ -3,6 +3,8 @@
 export const STORAGE_KEY        = "gruth.conversations";
 export const TITLE_MAX_LENGTH   = 38;
 export const TEXTAREA_MAX_HEIGHT = 200;
+// Longueur max d'un message (doit rester alignée avec MAX_MESSAGE_CHARS côté serveur)
+export const MESSAGE_MAX_CHARS  = 2000;
 export const API_ENDPOINT       = "/api/chat";
 export const FALLBACK_ANSWER    = "Je n'ai pas pu générer de réponse. Réessayez.";
 export const ONBOARDING_KEY     = "gruth.onboarding.done";

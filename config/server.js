@@ -6,6 +6,12 @@ export const DEFAULT_PORT    = 3000;
 export const TEMPERATURE     = 0.4;
 // Nombre de tours de conversation transmis à l'API par requête
 export const MAX_HISTORY     = 20;
-export const MAX_BODY_SIZE   = "1mb";
+// Taille max du corps JSON accepté (protège contre les requêtes géantes / vidage de tokens)
+export const MAX_BODY_SIZE   = "100kb";
+// Longueur max d'un message utilisateur (en caractères) — au-delà : requête rejetée
+export const MAX_MESSAGE_CHARS = 2000;
+// Anti-spam : nombre max de requêtes par IP sur la fenêtre de temps
+export const RATE_LIMIT_WINDOW_MS = 60_000;
+export const RATE_LIMIT_MAX        = 20;
 // Tentatives sur des ports successifs si le port cible est occupé
 export const PORT_RETRY_MAX  = 10;
