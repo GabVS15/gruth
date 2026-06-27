@@ -2,6 +2,10 @@
 
 export const MISTRAL_URL     = "https://api.mistral.ai/v1/chat/completions";
 export const DEFAULT_MODEL   = "mistral-large-latest";
+// Modèle Mistral par mode GRuth : Tennessee privilégie la rapidité (small), Justice la
+// profondeur d'analyse pour les avocats (large).
+export const MODEL_TENNESSEE = "mistral-small-latest";
+export const MODEL_JUSTICE   = "mistral-large-latest";
 export const DEFAULT_PORT    = 3000;
 export const TEMPERATURE     = 0.4;
 // Nombre de tours de conversation transmis à l'API par requête

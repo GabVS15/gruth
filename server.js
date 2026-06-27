@@ -7,7 +7,8 @@ import path from "node:path";
 import { readFileSync } from "node:fs";
 import {
   MISTRAL_URL,
-  DEFAULT_MODEL,
+  MODEL_TENNESSEE,
+  MODEL_JUSTICE,
   DEFAULT_PORT,
   TEMPERATURE,
   MAX_HISTORY,
@@ -17,24 +18,39 @@ import {
   RATE_LIMIT_MAX,
   PORT_RETRY_MAX,
 } from "./config/server.js";
-import { buildSystemPrompt } from "./config/system-prompt.js";
+import { buildSystemPrompt, buildJusticeSystemPrompt } from "./config/system-prompt.js";
 
 dotenv.config();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-let knowledge = "";
-try {
-  knowledge = readFileSync(path.join(__dirname, "knowledge.md"), "utf8");
-} catch {
-  console.warn("  ⚠️  knowledge.md introuvable — GRuth fonctionnera sans base de connaissances RP.");
+function loadKnowledge(file) {
+  try {
+    return readFileSync(path.join(__dirname, file), "utf8");
+  } catch {
+    console.warn(`  ⚠️  ${file} introuvable — la base correspondante sera vide.`);
+    return "";
+  }
 }
 
 const app = express();
 const PORT = process.env.PORT || DEFAULT_PORT;
 const MISTRAL_API_KEY = process.env.MISTRAL_API_KEY;
-const MISTRAL_MODEL = process.env.MISTRAL_MODEL || DEFAULT_MODEL;
-const SYSTEM_PROMPT = buildSystemPrompt(knowledge);
+
+// Registre des modèles GRuth. Chaque mode a sa propre base de connaissances, son prompt
+// système et son modèle Mistral : Tennessee privilégie la rapidité (small), Justice la
+// profondeur d'analyse (large). L'identifiant 'model' est envoyé par le client.
+const GRUTH_MODELS = {
+  tennessee: {
+    mistralModel: MODEL_TENNESSEE,
+    systemPrompt: buildSystemPrompt(loadKnowledge("knowledge.md")),
+  },
+  justice: {
+    mistralModel: MODEL_JUSTICE,
+    systemPrompt: buildJusticeSystemPrompt(loadKnowledge("knowledge-justice.md")),
+  },
+};
+const DEFAULT_GRUTH_MODEL = "tennessee";
 
 app.use(helmet({
   contentSecurityPolicy: {
@@ -67,7 +83,11 @@ app.use((err, _req, res, next) => {
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/api/health", (_req, res) => {
-  res.json({ ok: true, model: MISTRAL_MODEL, configured: Boolean(MISTRAL_API_KEY) });
+  res.json({
+    ok: true,
+    models: { tennessee: MODEL_TENNESSEE, justice: MODEL_JUSTICE },
+    configured: Boolean(MISTRAL_API_KEY),
+  });
 });
 
 app.post("/api/chat", async (req, res) => {
@@ -77,9 +97,17 @@ app.post("/api/chat", async (req, res) => {
     });
   }
 
-  const { messages } = req.body || {};
+  const { messages, model } = req.body || {};
   if (!Array.isArray(messages) || messages.length === 0) {
     return res.status(400).json({ error: "Le champ 'messages' est requis." });
+  }
+
+  // Sélection du modèle GRuth (Tennessee par défaut). On rejette un id inconnu plutôt que
+  // de retomber silencieusement sur le défaut.
+  const modelId = typeof model === "string" && model ? model : DEFAULT_GRUTH_MODEL;
+  const selected = GRUTH_MODELS[modelId];
+  if (!selected) {
+    return res.status(400).json({ error: "Modèle inconnu." });
   }
 
   // Garde-fou anti-vidage de tokens : on rejette toute requête contenant un message
@@ -101,11 +129,11 @@ app.post("/api/chat", async (req, res) => {
 
   // Le prompt système est injecté côté serveur — l'utilisateur ne peut pas le remplacer
   const payload = {
-    model: MISTRAL_MODEL,
+    model: selected.mistralModel,
     stream: true,
     temperature: TEMPERATURE,
     messages: [
-      { role: "system", content: SYSTEM_PROMPT },
+      { role: "system", content: selected.systemPrompt },
       ...messages
         .filter((m) => m && (m.role === "user" || m.role === "assistant") && typeof m.content === "string")
         .slice(-MAX_HISTORY),
@@ -161,7 +189,7 @@ app.post("/api/chat", async (req, res) => {
 function start(port, attemptsLeft = PORT_RETRY_MAX) {
   const server = app.listen(port, () => {
     console.log(`\n  GRuth — serveur démarré sur http://localhost:${port}`);
-    console.log(`  Modèle Mistral : ${MISTRAL_MODEL}`);
+    console.log(`  Modèles Mistral : Tennessee=${MODEL_TENNESSEE} · Justice=${MODEL_JUSTICE}`);
     console.log(`  Clé API configurée : ${MISTRAL_API_KEY ? "oui" : "NON (voir .env)"}\n`);
   });
 

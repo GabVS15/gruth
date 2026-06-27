@@ -27,7 +27,42 @@ export function renderMarkdown(text) {
   let inList = false;
   let listTag = "ul";
 
-  for (const line of lines) {
+  // Ligne de séparation d'un tableau GFM : |---|:--:|--:| (tirets, deux-points, pipes).
+  const isTableSep = (l) =>
+    l.includes("|") && /^\s*\|?(\s*:?-+:?\s*\|)+\s*:?-+:?\s*\|?\s*$/.test(l);
+  // Découpe une ligne de tableau en cellules (retire les pipes de bord).
+  const splitRow = (l) => l.trim().replace(/^\|/, "").replace(/\|$/, "").split("|").map((c) => c.trim());
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    // Tableau : ligne d'en-tête contenant un pipe + ligne de séparation juste en dessous.
+    if (line.includes("|") && isTableSep(lines[i + 1] || "")) {
+      if (inList) { html += `</${listTag}>`; inList = false; }
+      const headers = splitRow(line);
+      const aligns = splitRow(lines[i + 1]).map((c) => {
+        const l = c.startsWith(":"), r = c.endsWith(":");
+        return l && r ? "center" : r ? "right" : l ? "left" : "";
+      });
+      const cellAttr = (idx) => (aligns[idx] ? ` style="text-align:${aligns[idx]}"` : "");
+
+      let t = "<table><thead><tr>";
+      headers.forEach((h, idx) => { t += `<th${cellAttr(idx)}>${h}</th>`; });
+      t += "</tr></thead><tbody>";
+
+      i += 1; // saute la ligne de séparation
+      while (i + 1 < lines.length && lines[i + 1].includes("|") && lines[i + 1].trim() !== "") {
+        i += 1;
+        const cells = splitRow(lines[i]);
+        t += "<tr>";
+        headers.forEach((_, idx) => { t += `<td${cellAttr(idx)}>${cells[idx] ?? ""}</td>`; });
+        t += "</tr>";
+      }
+      t += "</tbody></table>";
+      html += t;
+      continue;
+    }
+
     const hr      = line.match(/^\s*([-*_])\1{2,}\s*$/);
     const heading = line.match(/^\s*(#{1,6})\s+(.*?)\s*#*\s*$/);
     const ul      = line.match(/^\s*[-*]\s+(.*)/);

@@ -5,6 +5,13 @@ export const TITLE_MAX_LENGTH   = 38;
 export const TEXTAREA_MAX_HEIGHT = 200;
 // Longueur max d'un message (doit rester alignée avec MAX_MESSAGE_CHARS côté serveur)
 export const MESSAGE_MAX_CHARS  = 2000;
+
+// Modèles GRuth proposés dans le sélecteur (les id doivent correspondre à GRUTH_MODELS côté serveur)
+export const DEFAULT_MODEL_ID = "tennessee";
+export const MODELS = {
+  tennessee: { name: "Tennessee", desc: "Assistant général de l'État du Tennessee" },
+  justice:   { name: "Justice",   desc: "Spécialisé droit & justice, pour les avocats" },
+};
 export const API_ENDPOINT       = "/api/chat";
 export const FALLBACK_ANSWER    = "Je n'ai pas pu générer de réponse. Réessayez.";
 export const ONBOARDING_KEY     = "gruth.onboarding.done";

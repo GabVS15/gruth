@@ -2,6 +2,8 @@ import {
   TITLE_MAX_LENGTH,
   TEXTAREA_MAX_HEIGHT,
   MESSAGE_MAX_CHARS,
+  MODELS,
+  DEFAULT_MODEL_ID,
   API_ENDPOINT,
   FALLBACK_ANSWER,
   ONBOARDING_KEY,
@@ -36,6 +38,10 @@ const els = {
   onboNext:        $("#onboNext"),
   onboStart:       $("#onboStart"),
   debugOnboarding: $("#debugOnboarding"),
+  modelSelect:     $("#modelSelect"),
+  modelPill:       $("#modelPill"),
+  modelPillName:   $("#modelPillName"),
+  modelMenu:       $("#modelMenu"),
 };
 
 function setHomeState(isHome) {
@@ -57,13 +63,60 @@ function currentConv() {
 }
 
 function newConversation() {
-  const conv = { id: crypto.randomUUID(), title: "Nouvelle conversation", messages: [] };
+  const conv = {
+    id: crypto.randomUUID(),
+    title: "Nouvelle conversation",
+    messages: [],
+    model: DEFAULT_MODEL_ID,
+  };
   conversations.unshift(conv);
   currentId = conv.id;
   saveConversations(conversations);
   renderHistory();
   renderMessages();
+  updateModelUI();
 }
+
+// Modèle de la conversation courante (avec repli pour les anciennes conversations sauvegardées)
+function currentModel() {
+  const conv = currentConv();
+  if (conv && MODELS[conv.model]) return conv.model;
+  return DEFAULT_MODEL_ID;
+}
+
+function updateModelUI() {
+  const id = currentModel();
+  els.modelPillName.textContent = MODELS[id].name;
+  els.modelMenu.querySelectorAll(".model-option").forEach((opt) => {
+    opt.setAttribute("aria-checked", String(opt.dataset.model === id));
+  });
+}
+
+function setModelMenu(open) {
+  els.modelSelect.classList.toggle("open", open);
+  els.modelPill.setAttribute("aria-expanded", String(open));
+}
+
+function selectModel(id) {
+  if (!MODELS[id]) return;
+  let conv = currentConv();
+  if (!conv) { newConversation(); conv = currentConv(); }
+  conv.model = id;
+  saveConversations(conversations);
+  updateModelUI();
+  setModelMenu(false);
+}
+
+els.modelPill.addEventListener("click", (e) => {
+  e.stopPropagation();
+  setModelMenu(!els.modelSelect.classList.contains("open"));
+});
+els.modelMenu.querySelectorAll(".model-option").forEach((opt) => {
+  opt.addEventListener("click", () => selectModel(opt.dataset.model));
+});
+document.addEventListener("click", (e) => {
+  if (!els.modelSelect.contains(e.target)) setModelMenu(false);
+});
 
 function renderHistory() {
   els.history.innerHTML = "";
@@ -79,6 +132,7 @@ function renderHistory() {
       currentId = conv.id;
       renderHistory();
       renderMessages();
+      updateModelUI();
       setSidebar(false);
     };
 
@@ -196,7 +250,7 @@ async function sendMessage(text) {
     const res = await fetch(API_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ messages: conv.messages }),
+      body: JSON.stringify({ messages: conv.messages, model: conv.model || DEFAULT_MODEL_ID }),
     });
 
     if (!res.ok || !res.body) {
@@ -294,6 +348,7 @@ document.addEventListener("click", () => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     document.querySelectorAll(".has-popover.open").forEach((w) => w.classList.remove("open"));
+    setModelMenu(false);
     setSidebar(false);
   }
 });
@@ -307,6 +362,7 @@ if (conversations.length > 0) {
 }
 renderHistory();
 renderMessages();
+updateModelUI();
 els.input.focus();
 
 // Onboarding — affiché une seule fois à la première visite
