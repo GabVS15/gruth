@@ -2,11 +2,12 @@
 
 export const MISTRAL_URL     = "https://api.mistral.ai/v1/chat/completions";
 export const DEFAULT_MODEL   = "mistral-large-latest";
-// Modèle Mistral par mode GRuth : Tennessee privilégie la rapidité (ministral 8b), Justice la
-// profondeur d'analyse pour les avocats (ministral 14b).
+// Modèle Mistral par mode GRuth. Les deux modes utilisent ministral 14b : ministral 8b ne
+// respectait pas la consigne de s'en tenir aux sources (il ajoutait agences, adresses et
+// démarches du monde réel).
 // NB : mistral-small / mistral-large ne sont pas accessibles avec l'abonnement Mistral actuel
 // (quota à 0 et modèle hors abonnement) — à remettre en cas de passage à un plan payant.
-export const MODEL_TENNESSEE = "ministral-8b-latest";
+export const MODEL_TENNESSEE = "ministral-14b-latest";
 export const MODEL_JUSTICE   = "ministral-14b-latest";
 // Serveur MCP des Codes législatifs : source de référence pour les textes de loi
 export const MCP_CODES_URL        = "https://gov-tn.com/mcp/codes";
