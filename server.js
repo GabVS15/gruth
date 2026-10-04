@@ -38,8 +38,8 @@ const PORT = process.env.PORT || DEFAULT_PORT;
 const MISTRAL_API_KEY = process.env.MISTRAL_API_KEY;
 
 // Registre des modèles GRuth. Chaque mode a sa propre base de connaissances, son prompt
-// système et son modèle Mistral : Tennessee privilégie la rapidité (small), Justice la
-// profondeur d'analyse (large). L'identifiant 'model' est envoyé par le client.
+// système et son modèle Mistral : Tennessee privilégie la rapidité, Justice la
+// profondeur d'analyse (voir config/server.js). L'identifiant 'model' est envoyé par le client.
 const GRUTH_MODELS = {
   tennessee: {
     mistralModel: MODEL_TENNESSEE,

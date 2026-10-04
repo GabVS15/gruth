@@ -2,10 +2,12 @@
 
 export const MISTRAL_URL     = "https://api.mistral.ai/v1/chat/completions";
 export const DEFAULT_MODEL   = "mistral-large-latest";
-// Modèle Mistral par mode GRuth : Tennessee privilégie la rapidité (small), Justice la
-// profondeur d'analyse pour les avocats (large).
-export const MODEL_TENNESSEE = "mistral-small-latest";
-export const MODEL_JUSTICE   = "mistral-large-latest";
+// Modèle Mistral par mode GRuth : Tennessee privilégie la rapidité (ministral 8b), Justice la
+// profondeur d'analyse pour les avocats (ministral 14b).
+// NB : mistral-small / mistral-large ne sont pas accessibles avec l'abonnement Mistral actuel
+// (quota à 0 et modèle hors abonnement) — à remettre en cas de passage à un plan payant.
+export const MODEL_TENNESSEE = "ministral-8b-latest";
+export const MODEL_JUSTICE   = "ministral-14b-latest";
 export const DEFAULT_PORT    = 3000;
 export const TEMPERATURE     = 0.4;
 // Nombre de tours de conversation transmis à l'API par requête
