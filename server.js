@@ -63,7 +63,9 @@ app.use(helmet({
     },
   },
 }));
-app.use(rateLimit({
+// Rate limit limité à l'API : appliqué aux fichiers statiques, il bloquait des modules JS
+// (une page = ~7 requêtes) dès 2-3 rechargements par minute, ce qui cassait tout le front.
+app.use("/api/", rateLimit({
   windowMs: RATE_LIMIT_WINDOW_MS,
   max: RATE_LIMIT_MAX,
   standardHeaders: true,
