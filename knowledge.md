@@ -7,11 +7,12 @@
 
 ## 1. GOUVERNEURS DU TENNESSEE
 
-Gouverneur **actuel** : **Mark Helman** (67e), Démocrate, depuis le 04 mars 2026.
+Gouverneur **actuel** : **Mark Lamb** (68e), Républicain.
 
 | Rang | Nom | Parti | Période |
 |------|-----|-------|---------|
-| 67e | **Mark Helman** | Démocrate | depuis le 04 mars 2026 (actuel) |
+| 68e | **Mark Lamb** | Républicain | actuel |
+| 67e | **Mark Helman** | Démocrate | 04 mars 2026 → investiture de Mark Lamb |
 | 65e & 66e | **Jim Brown** | Libertarien | 25 janv 2026 → 04 mars 2026 *(par intérim : Donald Becker)* ; réélu, 05 juil 2025 → 25 janv 2026 (démission) |
 | 64e | **Donald Becker** | Démocrate | 09 févr 2025 → 05 juil 2025 |
 | 63e | **June R. Reynolds** | Républicain | 13 janv 2025 → 09 févr 2025 *(par intérim : Richard Bailey)* ; 06 oct 2024 → 13 janv 2025 (démission) |
@@ -27,15 +28,6 @@ Gouverneur **actuel** : **Mark Helman** (67e), Démocrate, depuis le 04 mars 202
 | 52e | **Austin Keller** | Démocrate | 22 sept 2019 → 23 févr 2020 |
 | 51e | **Joshua D. Parker** | Républicain | 10 mai 2019 → 22 sept 2019 |
 | 50e | **Zack White** | Patriotic Party of the People | 18 nov 2018 → 10 mai 2019 |
-
-### Élection en cours — 68e élection gouvernatoriale
-
-| Candidat | Parti |
-|----------|-------|
-| **Grant Rutherford** | Démocrate |
-| **Mark Lamb** | Républicain |
-| **Alexandre Lynch** | Conservative Party |
-| **Marcus Bradley** | Peoples Party |
 
 ---
 
@@ -99,25 +91,8 @@ Le texte des lois (Code pénal, Code de procédure pénale, Code civil, Code de 
 
 ## 6. INSTITUTIONS POLITIQUES
 
-### 6.1 Les élections
-- **Élection du Gouverneur** : tous les 4 mois.
-- **Élections législatives** (représentants de l'Assemblée Générale) : tous les 4 mois.
-- **Élection du Sheriff** : tous les 2 ans.
-- Les élections se tiennent dans les **bureaux de vote** présents dans chaque **City Hall (mairie)**.
-
-**Conditions de candidature à l'élection du Gouverneur :**
-- Être âgé de 18 ans minimum et posséder la nationalité américaine.
-- Être rattaché à un **parti politique**.
-- Publier un **programme politique** avec sa candidature.
-- Publier une **liste d'au moins 4 personnes** susceptibles de siéger à l'Assemblée Générale (sans obligation de les hiérarchiser) : cette équipe accompagne le candidat et entre à l'Assemblée en cas de victoire, ou en cas de défaite selon le score obtenu.
-- Date limite de dépôt des candidatures : **mercredi 1ᵉʳ juillet 2026 (inclus)**.
-
-**Liste législative seule :** il est possible de présenter uniquement une liste de candidats à l'Assemblée Générale, sans candidat au poste de Gouverneur. Les conditions sont identiques à celles de l'élection du Gouverneur, et le titre de la candidature doit être précédé de **« [Législatives] »**.
-
-**Résultat et répartition des sièges :** le candidat ayant obtenu le plus de voix est élu Gouverneur. Le score réalisé par chaque candidat lui donne, de facto, un nombre de représentants à l'Assemblée Générale **proportionnel à son score** — ce principe vaut pour tous les candidats, vainqueur ou non.
-
-### 6.2 Le Gouverneur (pouvoir exécutif)
-- Dirige la branche exécutive de l'État et met en œuvre le projet pour lequel il a été élu.
+### 6.1 Le Gouverneur (pouvoir exécutif)
+- Dirige la branche exécutive de l'État et met en œuvre sa politique.
 - Nomme des **Hauts Commissaires** ainsi que divers responsables : le **Procureur général**, les **juges à la Cour Suprême**, le **Secrétaire général de l'État**, etc.
 - Propose le **budget** de l'État.
 - Rédige des **projets de loi**, et **ratifie ou non** les lois votées par les parlementaires (**droit de veto** — la loi doit alors être revotée).
@@ -125,26 +100,13 @@ Le texte des lois (Code pénal, Code de procédure pénale, Code civil, Code de 
 - Peut déclarer l'**état d'urgence**.
 - Dispose du **droit de grâce** : il peut arrêter les poursuites contre une personne non encore jugée, ou supprimer la peine d'une personne déjà condamnée.
 - Mandat de **quatre mois**.
-- **Non-cumul des fonctions** : en cas de victoire, le Gouverneur entrant doit abandonner toutes ses fonctions précédentes, à l'exception du rôle de **Chairman de son parti politique**.
-- L'époux ou l'épouse du candidat élu accède à la fonction de **Première Dame** ou **Premier Gentleman** du Tennessee.
-- Gouverneur **actuel** : **Mark Helman** (67e), depuis le 4 mars 2026.
+- **Non-cumul des fonctions** : le Gouverneur abandonne toutes ses autres fonctions, à l'exception du rôle de **Chairman de son parti politique**.
+- L'époux ou l'épouse du Gouverneur occupe la fonction de **Première Dame** ou **Premier Gentleman** du Tennessee.
+- Gouverneur **actuel** : **Mark Lamb** (68e), Républicain.
 
-### 6.3 L'Assemblée Générale (pouvoir législatif)
+### 6.2 L'Assemblée Générale (pouvoir législatif)
 - Composée de **10 à 18 représentants** élus, siégeant sous l'autorité d'un **Speaker** (élu par ses pairs).
 - Rôle : **rédiger et adopter les lois** de l'État, et **surveiller le pouvoir exécutif** (demander des comptes au gouverneur ou à ses responsables, et, exceptionnellement, démettre le gouverneur de ses fonctions).
-
-**Composition actuelle (11/11 sièges, mise à jour du 04/04) :**
-
-- **Speaker (Président)** : Hans Durant *(Démocrate)*
-- **Speaker Pro Tempore (Vice-Président)** : Josh McCarter *(Républicain)*
-
-| Groupe | Sièges | Représentants | Suppléant |
-|--------|--------|----------------|-----------|
-| Démocrate | 4 | Jesse Harris **(Whip)**, John Bellinger, Jason Reed, Grant Rutherford | Scott Hudson |
-| Libertarien | 2 | Jackson McAllister **(Whip)**, Amber Millington | — |
-| Républicain | 3 | Josh McCarter **(Whip, Speaker Pro Tempore)**, Lucas R. Willchurch, Earl Thompson | — |
-| Indépendants | 1 | Donald Becker | — |
-| People's Alliance | 1 | Marcus Bradley | Joel Sullivan |
 
 ---
 
@@ -158,10 +120,10 @@ L'État connaît plusieurs types d'organisations criminelles :
 
 ---
 
-## 8. DÉCRETS DU GOUVERNEUR HELMAN (Ordres Exécutifs, Proclamations, Nominations & Grâces)
+## 8. DÉCRETS DE L'ANCIEN GOUVERNEUR HELMAN (Ordres Exécutifs, Proclamations, Nominations & Grâces)
 
 > Recueil officiel des Ordres Exécutifs (Executive Orders), proclamations, mémorandums et
-> lettres de commission émis par le Gouverneur **Mark Helman** (67e), publiés au Bulletin
+> lettres de commission émis par l'ancien Gouverneur **Mark Helman** (67e), publiés au Bulletin
 > Officiel / Tennessee Register. Le Secrétaire d'État co-signe et enregistre les actes :
 > **Horace Shaw** jusqu'au 3 avril 2026, puis **Jonathan Cruz** à compter de sa nomination.
 
